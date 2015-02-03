@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   filedata = fs.readFileSync("index.html").toString()
-  filedata += " " + os.type() + " " + os.arch() 
+  //filedata += " " + os.type() + " " + os.arch() 
   response.send(filedata)
 })
 
